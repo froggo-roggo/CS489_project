@@ -159,3 +159,79 @@
    3. 기존 서비스를 개선하는 쪽으로 나가도 좋을 듯
 
 공유된 자료 읽어보고, 계획 단계별로 구체화해서 다음주 수요일 19시에 다시 모이는 것으로.
+
+## 20231025
+
+### 진행상황
+
+암호화 기반 방식은 JavaScript 수준에선 구현이 어려울 거 같다.
+
+워터마크도 세부적으로 develop할 방향이 잘 안 보여서, 다른 주제로 약간 수정해보는 것은 어떤지?
+
+### 아이디어
+
+- 이미지 배너 광고의 접근성 향상 by 정원빈
+  
+  - 스크린리더 얘기가 나왔어서 그런데, 광고를 읽어주는 스크린 리더도 가능하지 않을까?
+
+- 시각 장애인용 광고차단 by 정원빈
+  
+  - 시각 장애인은 대다수가 전맹이 아닌 저시력자라, 화면 확대기나 스크린 리더를 같이 쓰는데 팝업 광고의 경우 대응하기 어렵다.
+  
+  - 이를 개선하는 프로그램이 있을까? 아예 anti-AD를 쓰는 방법도 있겠지만, 늘 가능한 방식은 아니다.
+
+- 최악의 광고 모음 by 양지수
+  
+  - 최악의 UI, 패스워드 설정하는 게임 같이 솔루션이 아니라 재미있는 경험을 제공하는 프로젝트도 괜찮을 거 같다.
+  
+  - 우리의 경우 최악의 접근성을 제공하거나 최고의 악질 팝업 광고 제작 등이 가능할 듯하다.
+
+### 주제 재선정
+
+팝업의 경우 아예 새 창을 띄우거나 부분/전체화면을 차지하고 본문과의 상호작용(스크롤, 클릭)을 막는 경우가 있다. Anti-AD를 써도 오히려 그런 류의 프로그램을 해제해달라고 요청을 띄우는 경우가 있고, 광고를 못 막기도 한다. 주로 `style` 태그 내의 `z_indx`를 써서 레이어 순위 조정하는 식이 주된 방식이다. 이 경우는 `z_indx`의 값만 마이너스로 바꾸면 되는데, Google Adsense가 제공하는 전형적인 케이스가 아니어도 수정할 수 있다.
+
+접근성 개선을 위해,
+
+1. 팝업창이 뜨는 경우 알림을 띄우기
+
+2. 팝업창 끄거나 확인하는 버튼 강조하기
+
+3. 자체적인 팝업창 제거 선택지 제공하기
+
+등등의 기능을 구현하면 좋을 거 같다. 이때 팝업을 아예 막아버리면 생기는 문제가 어떤 경우가 있는지 edge case 고민해야 한다.
+
+일요일 17시에 다시 만나서 발표 아웃라인 짜는 것으로.
+
+### 참고자료
+
+[Popup Ads Are Terrible, and They're Even Worse for the Blind](https://www.vice.com/en/article/bmvpb5/you-think-popup-ads-are-bad-theyre-even-worse-for-the-blind)
+
+[For blind Facebook users, ads haven't been labeled as ads](https://qz.com/1800064/for-blind-facebook-users-ads-havent-been-labeled-as-ads)
+
+[[TIL] 웹 접근성을 높이기 위한 스크린 리더 적용](https://dev-minju.tistory.com/224)
+
+[[데이터로 보는 마케팅 인사이트] 애드블로커 전성시대, 살아남는 ‘광고표준’을 찾아서 - 모비인사이드 MOBIINSIDE](https://www.mobiinside.co.kr/2018/11/28/magictbl-ad-blocker/)
+
+
+
+**Adblock 관련**
+
+[BlockAdblock](https://blockadblock.com/)
+
+[Anti Adblock Detector](https://chrome.google.com/webstore/detail/anti-adblock-detector/kjhdffcfinhkdfbbhjlfoadcdfgihmlp/related)
+
+
+
+**아래는 수집한 팝업 케이스**
+
+[티스토리 애드센스 블록(AdBlock) 탐지 및 해제 요청 방법 — 빨리 찾고 쉬자. Tiprest](https://chmodi.tistory.com/160)
+
+[구글 애드센스(AdSense)와 애드블록(Adblock) 문제 해결 방법 리뷰 - 취미 사진가 나라의 블로그](https://jknara.tistory.com/197)
+
+[티스토리 애드블록 차단 해제 요청 메시지 게시 방법 (Google 광고 차단 회복)](https://forbes.tistory.com/1636)
+
+[윈도우 11 강제로 전체화면 못하나요? - 미코](https://meeco.kr/mini/35922786)
+
+[구글 애드센스 광고 차단 회복 메시지 사용하기 (official. anti-adblock)](https://nodigitalmad.tistory.com/entry/%EA%B5%AC%EA%B8%80-%EA%B4%91%EA%B3%A0-%EC%B0%A8%EB%8B%A8-%ED%9A%8C%EB%B3%B5-anti-adblock)
+
+[애드센스 광고 차단 해제 요청 팝업 메시지 설정 방법](https://hans1106.tistory.com/entry/%EC%95%A0%EB%93%9C%EC%84%BC%EC%8A%A4-%EA%B4%91%EA%B3%A0-%EC%B0%A8%EB%8B%A8-%ED%95%B4%EC%A0%9C-%EC%9A%94%EC%B2%AD-%ED%8C%9D%EC%97%85-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95)
