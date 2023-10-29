@@ -212,15 +212,11 @@
 
 [[데이터로 보는 마케팅 인사이트] 애드블로커 전성시대, 살아남는 ‘광고표준’을 찾아서 - 모비인사이드 MOBIINSIDE](https://www.mobiinside.co.kr/2018/11/28/magictbl-ad-blocker/)
 
-
-
 **Adblock 관련**
 
 [BlockAdblock](https://blockadblock.com/)
 
 [Anti Adblock Detector](https://chrome.google.com/webstore/detail/anti-adblock-detector/kjhdffcfinhkdfbbhjlfoadcdfgihmlp/related)
-
-
 
 **아래는 수집한 팝업 케이스**
 
@@ -235,3 +231,82 @@
 [구글 애드센스 광고 차단 회복 메시지 사용하기 (official. anti-adblock)](https://nodigitalmad.tistory.com/entry/%EA%B5%AC%EA%B8%80-%EA%B4%91%EA%B3%A0-%EC%B0%A8%EB%8B%A8-%ED%9A%8C%EB%B3%B5-anti-adblock)
 
 [애드센스 광고 차단 해제 요청 팝업 메시지 설정 방법](https://hans1106.tistory.com/entry/%EC%95%A0%EB%93%9C%EC%84%BC%EC%8A%A4-%EA%B4%91%EA%B3%A0-%EC%B0%A8%EB%8B%A8-%ED%95%B4%EC%A0%9C-%EC%9A%94%EC%B2%AD-%ED%8C%9D%EC%97%85-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95)
+
+## 20231029
+
+### 프로젝트 방향성
+
+- 문제점 각인
+  
+  - 규정 제정
+  
+  - 저시력/색약/전맹 웹 체험
+  
+  - 법적 규제 충족도 정량화
+
+- 풍자
+  
+  - Worst-Accessibility 사이트 만들기
+  
+  - 사이트에서 정보 찾는 게임
+  
+  - Lighthouse 기반 사이트 순위표
+    
+    - Lighthouse는 검색 품질을 올리기 위한 거라 접근성은 다소 덜 중요하게 봄.
+    
+    - 다른 평가 방식 있어도 좋을 듯
+  
+  - 두 가지 디자인 동시에 주고 접근성 이상형 월드컵
+    
+    - 최악의 접근성 이상형 월드컵
+    
+    - 각 후보에 대해 솔루션 붙여두기
+    
+    - 순위표 제공
+    
+    - 공유 기능
+
+- 접근성 저해 해제: 기존의 스크린리더나 애드블록이 커버하지 못하는 범위 위주로
+  
+  - 팝업 제거 기능
+  
+  - 닫기 버튼 강조 기능
+  
+  - 웹사이트 제작자에게 방향성 가이드해주는 api
+    
+    - 태그 라벨링해주는 프로그램
+
+### 프로젝트 내용
+
+- 접근성 저해 해제용 프로그램
+
+- 풍자용 사이트: PleaseDoNotAccess.io
+  
+  - 제일 싫었던 부분 의견 집계/순위
+  
+  - 각 요소에 대한 솔루션 제공
+  
+  - 우리 저해용 프로그램 홍보
+
+### 발표자료 구성
+
+- 문제상황
+  
+  - 접근성 정의 및 예시
+  
+  - 우리는 특히 팝업 광고에 집중하려 한다.
+    
+    - 스크린리더 읽는 방식 등등 설명
+
+- 계획
+  
+  - PleaseDoNotAccess.io 구상 설명
+    
+    - [User Inyerface - A worst-practice UI experiment](https://userinyerface.com/)
+  
+  - 저시력/색약 필터 끼우고 체험
+    
+    - [온라인 웹 접근성 체험](https://nax.naver.com/index)
+    - [Colorblind Web Page Filter](https://www.toptal.com/designers/colorfilter)
+  
+  - (이런 게 애드블록으로도 커버 어려운) 팝업을 해제해주는 프로그램 만들어서 공유
