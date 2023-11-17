@@ -1,0 +1,30 @@
+{
+  "name": "팝업 감지 확장 프로그램",
+  "description": "웹 페이지의 팝업을 감지하는 프로그램입니다.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icons8-color-16.png",
+      "32": "/images/icons8-color-32.png",
+      "48": "/images/icons8-color-48.png",
+      "128": "/images/icons8-color-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icons8-color-16.png",
+    "32": "/images/icons8-color-32.png",
+    "48": "/images/icons8-color-48.png",
+    "128": "/images/icons8-color-128.png"
+  },
+  "options_page": "options.html"
+}
