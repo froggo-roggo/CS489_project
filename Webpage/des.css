@@ -28,6 +28,27 @@ body{
 	font-size: 20px;
 }
 
+.coloredText3{
+	margin: 50px 20% 50px 20%;
+	color: #2A0;
+	/*font-family: Vivaldi;*/
+	font-size: 15px;
+}
+
+.coloredText4{
+	margin: 50px 20% 50px 20%;
+	color: #CCC;
+	/*font-family: Vivaldi;*/
+	font-size: 20px;
+}
+
+.horizontalBar{
+	background-color: #F74;
+	width: auto;
+	height: 2px;
+	margin: 20px;
+}
+
 .topBar {
 	position: relative;
 	width: 100%;
