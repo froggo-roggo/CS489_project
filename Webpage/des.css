@@ -43,10 +43,10 @@ body{
 }
 
 .horizontalBar{
-	background-color: #F74;
+	background-color: #F93;
 	width: auto;
 	height: 2px;
-	margin: 20px;
+	margin: 10px;
 }
 
 .topBar {
