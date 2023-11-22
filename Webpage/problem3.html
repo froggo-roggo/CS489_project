@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+	<link rel="stylesheet" href="./des.css" type="text/css">
+    <!--link rel="shortcut icon" href="favicon.ico" type="image/x-icon"!-->
+    <!--link rel="icon" href="favicon.ico" type="image/x-icon"!-->
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+  <script type="module">
+	var cb = document.getElementById("colorblind");
+	var lv = document.getElementById("lowvision");
+	var og = document.getElementById("original");
+
+
+	function colorblind(){
+		if (cb.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter:grayscale(100%); backdrop-filter:grayscale(100%); background: #C40");
+			document.querySelector(".topBar").setAttribute("style", "-webkit-filter: grayscale(100%);");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(100%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			cb.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#colorblind").click(colorblind);
+
+	function lowvision(){
+		if (lv.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter: blur(3px) ;background: #C40");
+			//document.querySelector(".topBar").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			lv.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#lowvision").click(lowvision);
+
+	function original(){
+		if (og.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter:blur(0px); background: #C40;");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			og.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#original").click(original);
+	
+	function jsMove(){
+		//var baselink = "/Webpage/un1"
+		var pc = document.getElementById('passcode').value;
+		if (pc){
+			window.alert("Answer Submitted. 404 Error means wrong answer. "+pc);
+		}
+		else {
+			window.alert("Please fill the form.");
+		}
+		
+		//window.open(baselink.concat(pc));
+	}
+	
+	$("#sbtn").click(jsMove);
+  </script>
+  <body style = "background: #CC4400;">
+    <div class = "topBar" style = "position: relative">
+	 <div class="top-selected" id = "original">Original Intend</div>
+	  <div class="top" id = "colorblind">Color Blind</div>
+	  <div class="top" id = "lowvision">Low Vision</div>
+	</div>
+	<h2 style = "font-size: 30px">Problem 3</h2>
+	<div style = "width: 100%; height: auto;">
+		<div class = "coloredText4">
+			Screen readers vary in their ability to interpret and vocalize the CSS styling of a webpage. While some are adept at detecting and reading CSS, others predominantly rely on the unadorned HTML structure. This diversity can pose challenges when screen readers prioritize content for users. It becomes crucial to establish a consistent and well-organized HTML structure that aligns with the logical reading order from left to right and top to bottom, akin to the flow of content in a printed document.
+			</br>
+			Understanding the nuances of how screen readers interpret CSS styling is paramount. Although some screen readers can extract meaning from CSS, ensuring a reliable and universally accessible experience necessitates an HTML structure that inherently conveys content hierarchy. This is particularly vital for users who heavily rely on unstyled HTML to comprehend the information presented.
+			</br>
+			To circumvent potential challenges related to the reading order, developers should adhere to best practices in structuring HTML content. Employing semantic HTML elements, such as headings (&lt;h1&gt;, &lt;h2&gt;, etc.), paragraphs (&lt;p&gt;), and lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;), contributes to a clear and well-defined document structure. These elements, when arranged logically, facilitate an intuitive reading experience for both screen readers that interpret CSS and those that primarily rely on unstyled HTML.
+			</br>
+			Moreover, it is imperative to test webpages across various screen readers to ensure a consistent and accessible user experience. By doing so, developers can identify and rectify any discrepancies in how different screen readers interpret CSS, ensuring that the intended reading order is maintained.
+			</br>
+			In summary, while some screen readers excel in interpreting CSS styling, it is crucial to prioritize a robust and well-organized HTML structure. Aligning the HTML layout with the natural flow of content, akin to a printed document, enhances the accessibility of web content for users with diverse needs. Developers should continually refine and test their HTML structures to guarantee an inclusive digital experience across a spectrum of assistive technologies.
+		</div>
+	</div>
+		<div style = "margin-top: 30; padding-bottom: 30;">
+		<form autocomplete='off' id = 'submitform'>
+		  <input id = 'passcode' type='text' required><br><br>
+		</form>
+		<button type = 'submit' id = 'sbtn' form = 'submitform'>Submit</button>
+	</div>
+  </body>
+</html>
