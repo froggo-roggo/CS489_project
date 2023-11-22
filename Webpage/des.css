@@ -146,8 +146,9 @@ body{
 	margin: 30 50 30 50;
 	width: 250px;
 	height: 80px;
-	background: #3d5c59;
-	padding: 30 0 0 0;
-	font-size: 30px;
-	color: #BBBBBB;
+	background: #5d88BB;
+	padding: 10 0 0 0;
+	font-size: 50px;
+	color: #BB6969;
+	font-weight: 700;
 }
