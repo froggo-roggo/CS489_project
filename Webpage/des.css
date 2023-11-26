@@ -35,9 +35,19 @@ body{
 	font-size: 15px;
 }
 
+.sidebarArea{
+	float: left;
+	width: 17%;
+	min-height: 20%;
+	text-align: center;
+}
+
 .coloredText4{
-	margin: 50px 20% 50px 20%;
+	float: left;
+	display: inline-block;
+	margin: 50px 1% 50px 1%;
 	color: #CCC;
+	width: 64%;
 	/*font-family: Vivaldi;*/
 	font-size: 20px;
 }
@@ -210,4 +220,14 @@ body{
 	/*outline: 10px white;*/
 	border: 3px solid yellow;
 	/*background: darkred;*/
+}
+
+.p1sbb{
+	border: none;
+	/*float: left;*/
+	display: inline-block;
+	margin: 20;
+	width: 80%;
+	min-width: 50px;
+	height: 50px;
 }
