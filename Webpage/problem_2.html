@@ -65,12 +65,16 @@
 		var pc = document.getElementById('passcode').value;
 		if (pc){
 			window.alert("Answer Submitted. 404 Error means wrong answer.");
+			//window.open((baselink.concat(pc)).concat(".html"));
+			var link = (baselink.concat(pc)).concat(".html");
+			//window.location.replace(link);
+			window.location.href = link;
 		}
 		else {
 			window.alert("Please fill the form.");
 		}
 		
-		window.open((baselink.concat(pc)).concat(".html"));
+		
 	}
 	
 	$("#sbtn").click(jsMove);
@@ -161,7 +165,7 @@
 		<form autocomplete='off' id = 'submitform'>
 		  <input id = 'passcode' type='text' required><br><br>
 		</form>
-		<button type = 'submit' id = 'sbtn' form = 'submitform'>Submit</button>
+		<button id = 'sbtn'>Submit</button>
 	</div>
   </body>
 </html>

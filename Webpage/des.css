@@ -45,7 +45,16 @@ body{
 .coloredText4{
 	float: left;
 	display: inline-block;
-	margin: 50px 1% 50px 1%;
+	margin: 25px 1% 25px 1%;
+	color: #CCC;
+	width: 64%;
+	/*font-family: Vivaldi;*/
+	font-size: 20px;
+}
+
+.coloredText5{
+	display: inline-block;
+	margin: 25px 1% 25px 1%;
 	color: #CCC;
 	width: 64%;
 	/*font-family: Vivaldi;*/
