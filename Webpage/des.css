@@ -163,26 +163,51 @@ body{
 }
 
 .indexbutton{
+	border: none;
 	float: left;
 	margin: 30 50 30 50;
+	padding: 0;
 	width: 250px;
 	height: 80px;
 	background: #5d88BB;
-	padding: 10 0 0 0;
+	padding: 0 0 0 0;
 	font-size: 50px;
 	color: #BB6969;
 	font-weight: 700;
 }
 
+/*
+.indexbutton:hover{
+	outline: 10px white;
+	border: 3px solid yellow;
+	background: darkred;
+}*/
+
+
+.indexbutton:focus{
+	/*outline: 10px white;*/
+	border: 3px solid yellow;
+	/*background: darkred;*/
+}
+
+
 .p1button{
+	border: none;
 	float: left;
 	margin: 30 50 30 50;
+	padding: 0;
 	width: 250px;
 	height: 50px;
 	background: #5d88BB;
-	padding: 10 0 0 0;
+	padding: 0 0 0 0;
 	font-size: 25px;
 	color: #BB6969;
 	font-weight: 700;
 	pointer-events : none;
+}
+
+.p1button:focus{
+	/*outline: 10px white;*/
+	border: 3px solid yellow;
+	/*background: darkred;*/
 }
