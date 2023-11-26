@@ -173,3 +173,16 @@ body{
 	color: #BB6969;
 	font-weight: 700;
 }
+
+.p1button{
+	float: left;
+	margin: 30 50 30 50;
+	width: 250px;
+	height: 50px;
+	background: #5d88BB;
+	padding: 10 0 0 0;
+	font-size: 25px;
+	color: #BB6969;
+	font-weight: 700;
+	pointer-events : none;
+}

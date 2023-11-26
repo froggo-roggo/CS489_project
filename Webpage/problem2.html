@@ -61,16 +61,16 @@
 	$("#original").click(original);
 	
 	function jsMove(){
-		//var baselink = "/Webpage/un1"
+		var baselink = "./anscheck/prob2ans"
 		var pc = document.getElementById('passcode').value;
 		if (pc){
-			window.alert("Answer Submitted. 404 Error means wrong answer. "+pc);
+			window.alert("Answer Submitted. 404 Error means wrong answer.");
 		}
 		else {
 			window.alert("Please fill the form.");
 		}
 		
-		//window.open(baselink.concat(pc));
+		window.open((baselink.concat(pc)).concat(".html"));
 	}
 	
 	$("#sbtn").click(jsMove);
@@ -151,8 +151,8 @@
 			Question: Which of the following is the most appropriate explanation for the term 'Web Accessibility"? </br>
 			<span>1. Web accessibility aims to provide easy access only for people with disabilities. </span></br>
 			<span>2. The most important thing when placing elements such as buttons or links is to place them in an aesthetically pleasing manner. </span></br>
-			<span>3. Alternative text for images, videos, and content is used to provide additional information of the content. </span></br>
-			<span>4. Using appropriate color contrasts for easy differentiation, employing readable fonts, and increasing font sizes are all examples of efforts toward web accessibility. </span></br>
+			<span>3. Using appropriate color contrasts for easy differentiation, employing readable fonts, and increasing font sizes are all examples of efforts toward web accessibility. </span></br>
+			<span>4. Alternative text for images, videos, and content is used to provide additional information of the content. </span></br>
 			</p>
 		</div>
 		
