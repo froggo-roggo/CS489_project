@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Congratulations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+	<link rel="stylesheet" href="./des.css" type="text/css">
+    <!--link rel="shortcut icon" href="favicon.ico" type="image/x-icon"!-->
+    <!--link rel="icon" href="favicon.ico" type="image/x-icon"!-->
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+  <script type="module">
+	var cb = document.getElementById("colorblind");
+	var lv = document.getElementById("lowvision");
+	var og = document.getElementById("original");
+
+
+	function colorblind(){
+		if (cb.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter:grayscale(100%); backdrop-filter:grayscale(100%); background: #C40");
+			//document.querySelector(".topBar").setAttribute("style", "-webkit-filter: grayscale(100%);");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(100%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			cb.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#colorblind").click(colorblind);
+
+	function lowvision(){
+		if (lv.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter: blur(3px) ;background: #C40");
+			//document.querySelector(".topBar").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			lv.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#lowvision").click(lowvision);
+
+	function original(){
+		if (og.className == "top"){
+			document.body.setAttribute("style", "-webkit-filter:blur(0px); background: #C40;");
+			//document.querySelector(".coloredText1").setAttribute("style", "-webkit-filter: grayscale(0%);");
+			var sth = document.querySelector(".top-selected");
+			sth.className = "top";
+			og.className = "top-selected";
+		}
+		else{
+			return;
+		}
+	}
+
+	$("#original").click(original);
+  </script>
+  <body style = "background: #CC4400;">
+    <div class = "topBar" style = "position: relative">
+	 <div class="top-selected" tabIndex="1" id = "original">Original Intend</div>
+	  <div class="top" tabIndex="2" id = "colorblind">Color Blind</div>
+	  <div class="top" tabIndex="3" id = "lowvision">Low Vision</div>
+	</div>
+	<h1 class = "whitext">Congratulations</h1>
+	<div style = "width: 100%; height: auto;">
+		<div class = "whitext">
+			Congratulations. You've reached the last page.
+			</br>
+			</br>
+			You would have been able to learn about and directly experience some of the issues
+			related to web accessibility through this webpage.
+			</br>
+			</br> 
+			Apart from these elements, as shown in the image below,
+			there are many more aspects to consider for web accessibility,
+			such as internet connection speed.
+			</br>
+			</br> 
+			If you want to learn more about web accessibility, click the link below.
+			</br>
+			</br>
+			<span style="color: #00FFFF; text-decoration: underline">https://www.w3.org/WAI/fundamentals/accessibility-intro/</span>
+			</br>
+			</br>
+			Thank you for participating.
+		</div>
+	</div>
+	<div style = "margin: 100 100 0 100;">
+		
+		<div>
+	</div>
+  </body>
+</html>
