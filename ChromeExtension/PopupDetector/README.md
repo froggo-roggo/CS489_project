@@ -8,5 +8,5 @@
 (5) (If possible) set the border of every button of the popup element
 
 ## 2. How to Use it?
-(1) Click
+(1) Click the button (square)
 (2) Popup element is highlighted
