@@ -265,7 +265,7 @@ a:hover{
 
 .p1sbb:focus{
 	/*outline: 10px white;*/
-	border: 3px solid green;
+	border: 3px solid yellow;
 	/*background: darkred;*/
 }
 
@@ -301,6 +301,7 @@ button#hint{
 	background-color: #FFF;
 	color: #000;
 	font-size: 25px;
+	font-weight: 700;
 	/*cursor: pointer;*/
 }
 
@@ -311,6 +312,7 @@ button#sbtn{
 	background-color: #5d88BB;
 	color: #BB6969;
 	font-size: 25px;
+	font-weight: 700;
 	/*cursor: pointer;*/
 }
 
