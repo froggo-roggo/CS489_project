@@ -78,6 +78,15 @@
 	}
 	
 	$("#sbtn").click(jsMove);
+	
+	//var btn = document.getElementById("clsbtn");
+	function btnclck(){
+		document.getElementById("popupWrapper").setAttribute("style", "display: none");
+		document.getElementById("popupBox").setAttribute("style", "display: none");
+	}
+
+	$("#clsbtn").click(btnclck);
+	
   </script>
   <body style = "background: #CC4400;">
     <div class = "topBar" style = "position: relative">
@@ -89,53 +98,104 @@
 	<div style = "width: 100%; height: auto;">
 		
 		<div class = "coloredText5">
-			<p>
-			<audio controls style="width=250px;"><source src="samples/3.wav" type="audio/wav"></audio>
-			</br>
-			<b>To answer the question below, please listen to the screen reader result above.</b>
-			</br></br>
-			<!--<h3>Challenges in Screen Reading</h3>-->
-			Screen readers vary in their ability to interpret and vocalize the CSS styling of a webpage. 
-			While some are adept at detecting and reading CSS, others predominantly rely on the unadorned HTML structure. 
-			This diversity can pose challenges when screen readers prioritize content for users. It becomes 
-			crucial to establish a consistent and well-organized HTML structure that aligns with the logical 
-			reading order from left to right and top to bottom, akin to the flow of content in a printed document.
-			</br></br>
-			<!--<h3>Importance of Unstyled HTML</h3>-->
-			Understanding the nuances of how screen readers interpret CSS styling is paramount. Although some 
-			screen readers can extract meaning from CSS, ensuring a reliable and universally accessible experience 
-			necessitates an HTML structure that inherently conveys content hierarchy. This is particularly vital 
-			for users who heavily rely on unstyled HTML to comprehend the information presented.
-			</br></br>
-			<!--<h3>Importance of HTML structures</h3>-->
-			To circumvent potential challenges related to the reading order, developers should adhere to best 
-			practices in structuring HTML content. Employing semantic HTML elements, such as headings 
-			(&lt;h1&gt;, &lt;h2&gt;, etc.), paragraphs (&lt;p&gt;), and lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;), 
-			contributes to a clear and well-defined document structure. These elements, when arranged logically, 
-			facilitate an intuitive reading experience for both screen readers that interpret CSS and those that 
-			primarily rely on unstyled HTML.
-			</br></br>
-			<!--<h3>Importance of Webpage Testing</h3>-->
-			Moreover, it is imperative to test webpages across various screen readers to ensure a consistent 
-			and accessible user experience. By doing so, developers can identify and rectify any discrepancies 
-			in how different screen readers interpret CSS, ensuring that the intended reading order is maintained.
-			</br></br>
-			<!--<h3>Summary</h3>-->
-			In summary, while some screen readers excel in interpreting CSS styling, it is crucial to prioritize 
-			a robust and well-organized HTML structure. Aligning the HTML layout with the natural flow of content, 
-			akin to a printed document, enhances the accessibility of web content for users with diverse needs. 
-			Developers should continually refine and test their HTML structures to guarantee an inclusive digital 
-			experience across a spectrum of assistive technologies.
-			</p>
+			<div style = "width: 100%;">
+				<audio controls style="width=250px; margin-bottom: 30px"><source src="samples/Howdy.mp3" type="audio/mp3"></audio>
+				<div id = "title" class = "p3childpar">
+					<b>To answer the question below, please listen to the screen reader result above.</b>
+				</div>
+				<!--<h3>Challenges in Screen Reading</h3>-->
+				<div id = "mixed1" class = "p3childpar">
+					Screen readers vary in their ability to interpret and</br>
+					vocalize the CSS styling of a webpage. While some are </br>
+					adept at detecting and reading CSS, others </br>
+					predominantly rely only on the plain HTML structure. </br>
+					This diversity can pose challenges when screen readers</br>
+					prioritize content for users. It becomes crucial to</br>
+					establish a consistent and well-organized HTML</br> 
+					structure that aligns with the logical reading order </br>
+					from left to right and top to bottom, similar to the </br>
+					flow of content in a printed document.</br>
+				</div>
+				<!--<h3>Importance of Unstyled HTML</h3>-->
+				<div id = "mixed3" class = "p3childpar">
+					<!--<h3>Importance of HTML structures</h3>-->
+					To circumvent potential challenges related to the </br>
+					reading order, developers should adhere to best </br>
+					practices in structuring HTML content. Employing </br>
+					semantic HTML elements, such as headings (&lt;h1&gt;, </br>
+					&lt;h2&gt;, etc.), paragraphs (&lt;p&gt;), and lists</br>
+					(&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;), contributes to </br>
+					a clear and well-defined document structure. These </br>
+					elements, when arranged logically, facilitate an </br>
+					intuitive reading experience for both screen readers </br>
+					that interpret CSS and those that primarily rely on </br>
+					unstyled HTML.</br>
+				</div>
+				
+				<div class = "popUpWrapper" id = "popupWrapper">
+				</div>
+				<div class = "popUpBox" id = "popupBox">
+					<button class = "clsbtn" id = "clsbtn"> <img src = "samples/xbutton.png" style = "height: 30%; width: 30%; opacity: 30%"> </button>
+					<div class = "imgarea">
+						<img src = "samples/courseEval.png" style = "width: 100%; height: 100%">
+						
+					</div>
+					<span style = "font-size: 15px;"></br></span>
+					<span style = "font-weight: 700; font-size: 25px; color: #000;">
+						Free Course Evaluation </br>
+						Click now!
+					</span>
+					<span style = "font-weight: 500; font-size: 15px; color: #000;">
+						</br>
+						</br>
+						&gt; <a href = "https://cais.kaist.ac.kr/evalFinalCourseEvaluation"> https://cais.kaist.ac.kr/evalFinalCourseEvaluation </a> &lt;
+					</span>
+				</div>
+				
+				<div id = "mixed4" class = "p3childpar">
+					<!--<h3>Importance of Webpage Testing</h3>-->
+					Moreover, it is imperative to test webpages across </br>
+					various screen readers to ensure a consistent and </br>
+					accessible user experience. By doing so, developers </br>
+					can identify and rectify any discrepancies in how </br>
+					different screen readers interpret CSS, ensuring </br>
+					that the intended reading order is maintained.</br>
+				</div>
+				
+				<div id = "mixed2" class = "p3childpar">
+					Understanding the nuances of how screen readers </br>
+					interpret CSS styling is paramount. Although some </br>
+					screen readers can extract meaning from CSS, </br>
+					ensuring a reliable and universally accessible </br>
+					experience necessitates an HTML structure that </br>
+					inherently conveys content hierarchy. This is </br>
+					particularly important for users who heavily </br>
+					rely on a plain HTML to get the information.
+				</div>
+				<!--<h3>Summary</h3>-->
+				<div id = "mixed5" class = "p3childpar">
+					In summary, while some screen readers excel in </br>
+					interpreting CSS styling, it is crucial to </br>
+					prioritize a robust and well-organized HTML </br>
+					structure. Aligning the HTML layout with the </br>
+					natural flow of content, akin to a printed </br>
+					document, enhances the accessibility of web </br>
+					content for users with diverse needs. Developers </br>
+					should continually refine and test their HTML </br>
+					structures to guarantee an inclusive digital </br>
+					experience across a spectrum of assistive </br>
+					technologies.</br>
+				</div>
+			</div>
 			<div class = "horizontalBar"></div>
-			<p>
-			Question: Which of the following is the right order of contents in the HTML document?</br>
-			Hint: Most screen reader reads HTML content with the order from left to right and top to bottom.</br>
-			<span>1. 1-3-4-2-5</span></br>
-			<span>2. 1-2-4-5-3</span></br>
-			<span>3. 3-1-2-4-5</span></br>
-			<span>4. 2-5-3-4-1</span></br>
-			</p>
+			<div>
+				Question: Which of the following is the right order of contents in the HTML document?</br>
+				Hint: Most screen reader reads HTML content with the order from left to right and top to bottom.</br>
+				<span>1. 1-3-4-2-5</span></br>
+				<span>2. 1-2-4-5-3</span></br>
+				<span>3. 3-1-2-4-5</span></br>
+				<span>4. 2-5-3-4-1</span></br>
+			</div>
 		</div>
 		
 	<div style = "margin-top: 30; padding-bottom: 30;">
@@ -144,5 +204,8 @@
 		</form>
 		<button id = 'sbtn'>Submit</button>
 	</div>
+	
+	
+	
   </body>
 </html>
