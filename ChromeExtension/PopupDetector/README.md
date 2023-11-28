@@ -10,3 +10,12 @@
 ## 2. How to Use it?
 (1) Click the button (square)
 (2) Popup element is highlighted
+
+## 3. How to implement it
+(1) let a = document.querySelectorAll('div');
+(2) https://developer.mozilla.org/ko/docs/Web/API/NodeList
+(3) iterate every elements in the list
+(4) getComputedStyle(Element).zIndex
+(5) Abnormal zIndex = popup
+
+(6) Detected: Set border
