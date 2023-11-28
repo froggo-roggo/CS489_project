@@ -41,17 +41,19 @@ function setPageAddSomething(lst) {
   }
 }
 
+/*
 function setPageRemoveSomething(lst) {
   //document.body.prepend("This page has popup");
   //window.alert("Hmm");
-  console.log("Hmm");
-  console.log("List length:"+(lst.length));
+  //console.log("Hmm");
+  //console.log("List length:"+(lst.length));
   for(var e of lst){
 	console.log("Removing Border");
 	e.style.border = "none";
 	lst.pop(e);
   }
 }
+*/
 
 async function changeState(){
   if (doFind.classList.length == 0){
@@ -62,9 +64,9 @@ async function changeState(){
 		args: [lst],
 	  });
 	  await doFind.classList.add("selected");
-	  doFind.innerText = "Back to original page";
+	  //doFind.innerText = "Back to original page";
   }
-  else{
+  /*else{
 	  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 	  chrome.scripting.executeScript({
 		target: { tabId: tab.id },
@@ -73,5 +75,5 @@ async function changeState(){
 	  });
 	  await doFind.classList.remove("selected");
 	  doFind.innerText = "Let's find popups";
-  }
+  }*/
 }
