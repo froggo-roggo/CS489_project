@@ -29,6 +29,13 @@ function setPageAddSomething(lst) {
 	if (zi > 500){
 		console.log("Possibe Popup Content");
 		e.style.border = "5px solid #ff00ff";
+		var clst = e.childNodes;
+		console.log("child contents: "+clst.length);
+		for(var c of clst){
+			if(((c.tagName) == "DIV")||((c.tagName) == "BUTTON")){
+				c.style.border = "5px solid #ff00ff";
+			}
+		}
 		lst.push(e);
 	}
   }
