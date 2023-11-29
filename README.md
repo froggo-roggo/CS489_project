@@ -1,6 +1,6 @@
 # CS489_project
 
-## <Popup Detector>
+## 1> Popup Detector
 
 ### 1. Abstract Design
 (1) User clicks a button
@@ -21,7 +21,7 @@
 (5) Abnormal zIndex = popup
 (6) Detected: Set border
 
-## <PleaseDoNotAccess.io>
+## 2> PleaseDoNotAccess.io
 
 ### 1. url of the website
 https://froggo-roggo.github.io
