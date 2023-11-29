@@ -30,3 +30,13 @@ https://froggo-roggo.github.io
 (1) When accessed to the website, you can choose the filter among original intend, color blind, and low vision.
 (2) After reading the passage given, solve each quiz problems given.
 (3) Choose the worst web accessibility element you've experienced.
+
+### 3. Outline of the problems
+(1) Bad keyboard access
+(2) Bad color contrast
+(3) Screen reader reading in shuffled order
+(4) Inappropriate alternative text
+
+
+
+
