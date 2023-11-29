@@ -21,8 +21,6 @@ doFind.addEventListener("click", changeState);
  **/
 
 function setPageAddSomething() {
-  //document.body.prepend("This page has popup");
-  //window.alert("Hmm");
   var res = {};
   var list = [];
   var detected = false;
@@ -31,30 +29,21 @@ function setPageAddSomething() {
 	var zi = getComputedStyle(e).zIndex;
 	var ew = parseInt(getComputedStyle(e).width);
 	var eh = parseInt(getComputedStyle(e).height);
+	var ze = getComputedStyle(e).pointerEvents;
+	var zv = getComputedStyle(e).visibility;
+	var zd = getComputedStyle(e).display;
 	//console.log(zi+" "+parseInt(ew)+" "+eh);
-	if ((zi > 500)){
-		//console.log(e);
-		if((ew > 128)&&(eh > 128)){
+	if ((zi > 500) && ze && zv && zd){
+		console.log(e);
+		if((ew > 256)&&(eh > 256)){
 			detected = true;
 			e.style.border = "5px solid #ff00ff";
+			list.push(e);
 		}
-		var clst = e.children;
-		for(var c of clst){
-			//console.log(typeof(c));
-			var cw = parseInt(getComputedStyle(c).width);
-			var ch = parseInt(getComputedStyle(c).height);
-			if((((c.tagName) == "DIV")||((c.tagName) == "BUTTON")||((c.tagName) == "A")) && (cw > 128)&&(ch > 128)){
-				detected = true;
-				c.style.border = "5px solid #ff00ff";
-			}
-		}
-		list.push(e);
-		
+		res = childIter(e, 10, detected, list);
+		//console.log("res: "+res);
 	}
   }
-  res['reslist'] = list;
-  res['detres'] = detected;
-  //console.log(res);
   return res;
 }
 
@@ -77,27 +66,34 @@ async function changeState(){
 	  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 	  chrome.scripting.executeScript({
 		target: { tabId: tab.id },
-		function: setPageAddSomething,
-	  }).then(detectionResult => {
-		/*for (const {frameId, result} of detectionResult) {
-			console.log('Frame '+ frameId + ' result: ', result);
-		}*/
-		/*
-			The strucrue of detectionResult Object
-			Itself: Array(1)
-			0: dictionary
-				'documentId': '8EF0BF9AA5B95CFDD94EBE06BB132D0F']
-				'frameId': 0
-				'result': {detres: true, reslist: Array(2)}
-		*/
-		var detres = detectionResult[0]['result']['detres'];
-		//lst =  detectionResult[0]['result']['reslist'];
-		if (detres){
-			console.log("detected");
-			aud.play();
-			doFind.innerText = "Maybe there's popup";
-		}
+		files: ['setpage.js'],
+	  }).then(() => {
+			console.log("script injected");
+			chrome.scripting.executeScript({
+			target: { tabId: tab.id },
+			function: setPageAddSomething,
+		  }).then(detectionResult => {
+			/*for (const {frameId, result} of detectionResult) {
+				console.log('Frame '+ frameId + ' result: ', result);
+			}*/
+			/*
+				The strucrue of detectionResult Object
+				Itself: Array(1)
+				0: dictionary
+					'documentId': '8EF0BF9AA5B95CFDD94EBE06BB132D0F']
+					'frameId': 0
+					'result': {detres: true, reslist: Array(2)}
+			*/
+			var detres = detectionResult[0]['result']['detres'];
+			//lst =  detectionResult[0]['result']['reslist'];
+			if (detres){
+				console.log("detected");
+				aud.play();
+				doFind.innerText = "Maybe there's popup";
+			}
+		  });
 	  });
+	  
 	  await doFind.classList.add("selected");
   }
   /*else{
