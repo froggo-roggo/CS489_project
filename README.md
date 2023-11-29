@@ -4,6 +4,7 @@
 
 ### The purpose of this project is to emphasize the importance of "Web Accessibility".
 This project consists with a Chrome extension and a website. (the pop-up detector and the PleaseDoNotAccess.io)
+In addition, this project gives the chance to learn the contents about web accessibility, experience some of them, or get it better.
 
 ## 1> Popup Detector
 
